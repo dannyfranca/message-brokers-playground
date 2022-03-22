@@ -1,13 +1,11 @@
-import { handlers } from '@/handlers'
-import { Events } from '@/typings'
 import { Kafka, Consumer } from 'kafkajs'
 
+import { Events } from '@/typings'
 import { createKafkaClient } from './client'
 
 export const createSubscriber = (groupId: string, kafka?: Kafka) =>
   new KafkaJsSubscriber<Events>({
     groupId,
-    // handlers,
     kafka: kafka ?? createKafkaClient(),
   })
 
