@@ -1,6 +1,6 @@
-import { Events } from '@/typings'
 import { Kafka, Producer } from 'kafkajs'
 
+import { Events } from '@/typings'
 import { createKafkaClient } from './client'
 
 export const createPublisher = (kafka?: Kafka) =>
